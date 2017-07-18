@@ -24,7 +24,10 @@ var pike = {
     pike.randomNumber();
     for(var i = 0; i < hours.length; i++){
       this.hourlySales[i] = Math.ceil(this.customers[i] * this.avgSale);
+<<<<<<< HEAD
       this.cookieTotal += this.hourlySales[i];
+=======
+>>>>>>> a59a58cb63c7a962e6c719cde2b1cf7f1f3250e6
     }
   },
 
@@ -42,6 +45,10 @@ var pike = {
   },
 };
 
+<<<<<<< HEAD
+=======
+pike.sales();
+>>>>>>> a59a58cb63c7a962e6c719cde2b1cf7f1f3250e6
 pike.render();
 
 // Location #2 SeaTac Airport

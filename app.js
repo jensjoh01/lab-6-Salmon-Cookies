@@ -2,6 +2,10 @@
 
 var hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
+/*
+Location 1: 1st and Pike
+*/
+
 var pike = {
   minCust: 23,
   maxCust: 65,
@@ -11,7 +15,7 @@ var pike = {
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
-      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust);
+      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   },
 
@@ -59,7 +63,7 @@ var airport = {
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
-      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust);
+      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   },
 
@@ -106,7 +110,7 @@ var center = {
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
-      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust);
+      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   },
 
@@ -153,7 +157,7 @@ var hill = {
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
-      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust);
+      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   },
 
@@ -201,7 +205,7 @@ var alki = {
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
-      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust);
+      this.customers.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   },
 

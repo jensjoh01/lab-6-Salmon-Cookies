@@ -25,6 +25,7 @@ var pike = {
     for(var i = 0; i < hours.length; i++){
       this.hourlySales[i] = Math.ceil(this.customers[i] * this.avgSale);
       this.cookieTotal += this.hourlySales[i];
+
     }
   },
 
@@ -41,6 +42,9 @@ var pike = {
     pikeUL.appendChild(liEl);
   },
 };
+
+
+pike.sales();
 
 pike.render();
 

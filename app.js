@@ -12,6 +12,7 @@ var pike = {
   avgSale: 6.3,
   customers: [],
   hourlySales: [],
+  cookieTotal: 0,
 
   randomNumber: function(){
     for(var i = 0; i < hours.length; i++){
@@ -20,39 +21,30 @@ var pike = {
   },
 
   sales: function(){
+    pike.randomNumber();
     for(var i = 0; i < hours.length; i++){
-      this.hourlySales[i] = Math.floor(this.customers[i] * this.avgSale);
+      this.hourlySales[i] = Math.ceil(this.customers[i] * this.avgSale);
+      this.cookieTotal += this.hourlySales[i];
     }
   },
 
   render: function(){
+    pike.sales();
     var pikeUL = document.getElementById('pike');
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
-
       liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       pikeUL.appendChild(liEl);
     }
-  },
-
-  total: function(){
-    var pikeUL = document.getElementById('pike');
-    var cookieTotal = 0;
-    for(var i = 0; i < hours.length; i++){
-      cookieTotal += this.hourlySales[i];
-    }
-    var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
+    liEl = document.createElement('li');
+    liEl.textContent = 'Total: ' + this.cookieTotal + ' cookies';
     pikeUL.appendChild(liEl);
-    return cookieTotal;
-  }
+  },
 };
 
-
-pike.randomNumber();
-pike.sales();
 pike.render();
-pike.total();
+
+// Location #2 SeaTac Airport
 
 var airport = {
   minCust: 3,
@@ -101,6 +93,8 @@ airport.sales();
 airport.render();
 airport.total();
 
+// Location #3 Seattle Center
+
 var center = {
   minCust: 11,
   maxCust: 38,
@@ -148,6 +142,8 @@ center.sales();
 center.render();
 center.total();
 
+// Location #4 Capitol Hill
+
 var hill = {
   minCust: 20,
   maxCust: 38,
@@ -174,7 +170,6 @@ var hill = {
 
       liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       hillUL.appendChild(liEl);
-      console.log(this.hourlySales);
     }
   },
 
@@ -195,6 +190,8 @@ hill.randomNumber();
 hill.sales();
 hill.render();
 hill.total();
+
+// Location #5 Alki
 
 var alki = {
   minCust: 2,

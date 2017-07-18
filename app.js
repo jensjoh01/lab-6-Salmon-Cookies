@@ -26,7 +26,7 @@ var pike = {
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
 
-      liEl.textContent = hours[i] + ': ' + this.hourlySales[i];
+      liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       pikeUL.appendChild(liEl);
     }
   },
@@ -38,7 +38,7 @@ var pike = {
       cookieTotal += this.hourlySales[i];
     }
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal;
+    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
     pikeUL.appendChild(liEl);
     return cookieTotal;
   }
@@ -74,7 +74,7 @@ var airport = {
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
 
-      liEl.textContent = hours[i] + ': ' + this.hourlySales[i];
+      liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       airportUL.appendChild(liEl);
     }
   },
@@ -86,7 +86,7 @@ var airport = {
       cookieTotal += this.hourlySales[i];
     }
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal;
+    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
     airportUL.appendChild(liEl);
     return cookieTotal;
   }
@@ -121,7 +121,7 @@ var center = {
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
 
-      liEl.textContent = hours[i] + ': ' + this.hourlySales[i];
+      liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       centerUL.appendChild(liEl);
     }
   },
@@ -133,7 +133,7 @@ var center = {
       cookieTotal += this.hourlySales[i];
     }
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal;
+    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
     centerUL.appendChild(liEl);
     return cookieTotal;
   }
@@ -168,8 +168,9 @@ var hill = {
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
 
-      liEl.textContent = hours[i] + ': ' + this.hourlySales[i];
+      liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       hillUL.appendChild(liEl);
+      console.log(this.hourlySales);
     }
   },
 
@@ -180,7 +181,7 @@ var hill = {
       cookieTotal += this.hourlySales[i];
     }
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal;
+    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
     hillUL.appendChild(liEl);
     return cookieTotal;
   }
@@ -206,7 +207,7 @@ var alki = {
 
   sales: function(){
     for(var i = 0; i < hours.length; i++){
-      this.hourlySales[i] = Math.floor(this.customers[i] * this.avgSale);
+      this.hourlySales[i] = (Math.floor(this.customers[i] * this.avgSale));
     }
   },
 
@@ -215,7 +216,7 @@ var alki = {
     for(var i = 0; i < hours.length; i++){
       var liEl = document.createElement('li');
 
-      liEl.textContent = hours[i] + ': ' + this.hourlySales[i];
+      liEl.textContent = hours[i] + ': ' + this.hourlySales[i] + ' cookies';
       alkiUL.appendChild(liEl);
     }
   },
@@ -227,7 +228,7 @@ var alki = {
       cookieTotal += this.hourlySales[i];
     }
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total: ' + cookieTotal;
+    liEl.textContent = 'Total: ' + cookieTotal + ' cookies';
     alkiUL.appendChild(liEl);
     return cookieTotal;
   }

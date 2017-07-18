@@ -98,9 +98,9 @@ airport.render();
 airport.total();
 
 var center = {
-  minCust: 3,
-  maxCust: 24,
-  avgSale: 1.2,
+  minCust: 11,
+  maxCust: 38,
+  avgSale: 3.7,
   customers: [],
   hourlySales: [],
 
@@ -145,9 +145,9 @@ center.render();
 center.total();
 
 var hill = {
-  minCust: 3,
-  maxCust: 24,
-  avgSale: 1.2,
+  minCust: 20,
+  maxCust: 38,
+  avgSale: 2.3,
   customers: [],
   hourlySales: [],
 
@@ -193,9 +193,9 @@ hill.render();
 hill.total();
 
 var alki = {
-  minCust: 3,
-  maxCust: 24,
-  avgSale: 1.2,
+  minCust: 2,
+  maxCust: 16,
+  avgSale: 4.6,
   customers: [],
   hourlySales: [],
 

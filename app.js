@@ -6,9 +6,9 @@ var salesTable = document.getElementById('salesData');
 
 // object constructor for building each cookie store's sales data
 function CookieStore(name, minCust, maxCust, avgSale){
-  var customersEachHour = [];
-  var cookieSalesEachHour = [];
-  var cookieSalesTotal = 0;
+  this.customersEachHour = [];
+  this.cookieSalesEachHour = [];
+  this.cookieSalesTotal = 0;
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
@@ -17,15 +17,15 @@ function CookieStore(name, minCust, maxCust, avgSale){
   // createRandomNumberOfCustomers method creates a random number between customer mins and max (inclusive) at each store and pushes it into an array
   this.createRandomNumberOfCustomers = function(){
     for(var i = 0; i < hours.length; i++){
-      customersEachHour.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+      this.customersEachHour.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
   };
-  // populateCookieSalesEachHour method calculates cookie sales by multiplying the customers for each hour times the stores average cookie sales
+  // populatethis.cookieSalesEachHour method calculates cookie sales by multiplying the customers for each hour times the stores average cookie sales
   this.populateCookieSalesEachHour = function(){
     this.createRandomNumberOfCustomers();
     for(var i = 0; i < hours.length; i++){
-      cookieSalesEachHour.push(Math.ceil(customersEachHour[i] * this.avgSale));
-      cookieSalesTotal += cookieSalesEachHour[i];
+      this.cookieSalesEachHour.push(Math.ceil(this.customersEachHour[i] * this.avgSale));
+      this.cookieSalesTotal += this.cookieSalesEachHour[i];
     }
   };
 
@@ -38,12 +38,12 @@ function CookieStore(name, minCust, maxCust, avgSale){
     trEl.appendChild(tdEl);
     for(var i = 0; i < hours.length; i++){
       tdEl = document.createElement('td');
-      tdEl.textContent = cookieSalesEachHour[i];
+      tdEl.textContent = this.cookieSalesEachHour[i];
       trEl.appendChild(tdEl);
       salesTable.appendChild(trEl);
     }
     tdEl = document.createElement('td');
-    tdEl.textContent = cookieSalesTotal;
+    tdEl.textContent = this.cookieSalesTotal;
     trEl.appendChild(tdEl);
   };
   this.render();
@@ -55,7 +55,7 @@ function CookieStore(name, minCust, maxCust, avgSale){
 var header = function() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = '';
+  thEl.textContent = 'Store Names';
   trEl.appendChild(thEl);
   for(var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
@@ -71,8 +71,41 @@ var header = function() {
 header();
 
 // creating each new store object
-var pike = new CookieStore('1st and Pike', 23, 65, 6.3);
-var airport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
-var center = new CookieStore('Seattle Center', 11, 38, 3.7);
-var hill = new CookieStore('Capitol Hill', 20, 38, 2.3);
-var alki = new CookieStore('Alki', 2, 16, 4.6);
+// var pike = new CookieStore('1st and Pike', 23, 65, 6.3);
+// var airport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
+// var center = new CookieStore('Seattle Center', 11, 38, 3.7);
+// var hill = new CookieStore('Capitol Hill', 20, 38, 2.3);
+// var alki = new CookieStore('Alki', 2, 16, 4.6);
+
+var storeObjectName = ['pike', 'airport', 'center', 'hill', 'alki'];
+var storeNames = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
+var minCustomers = [23, 3, 11, 20, 2];
+var maxCustomers = [65, 24, 38, 38, 16];
+var avgSalePerCustomer = [6.3, 1.2, 3.7, 2.3, 4.6];
+
+for (var i = 0; i < storeObjectName.length; i++){
+  storeObjectName[i] = new CookieStore(storeNames[i], minCustomers[i], maxCustomers[i], avgSalePerCustomer[i]);
+}
+
+var hourlyTotal = function() {
+//make new row
+
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = 'Hourly Totals';
+  trEl.appendChild(tdEl);
+  for(var x = 0; x < hours.length; x++){
+    var sumUpHourlySales = 0;
+    //make data cell
+    tdEl = document.createElement('td');
+    for(var j = 0; j < storeObjectName.length; j++){
+      //add this data to cell. then it will loop to the next hour, make new data cell and continue.
+      sumUpHourlySales += storeObjectName[j].cookieSalesEachHour[x];
+      tdEl.textContent = sumUpHourlySales;
+    }
+    trEl.appendChild(tdEl);
+  }
+  salesTable.appendChild(trEl);
+};
+
+hourlyTotal();

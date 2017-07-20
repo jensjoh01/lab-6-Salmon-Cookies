@@ -1,0 +1,10 @@
+* {
+  font-family: 'Lora', serif;
+}
+
+header {
+  border: dotted;
+  border-color: orange;
+  border-width: 1px;
+  text-align: center;
+}

@@ -3,8 +3,80 @@
 }
 
 header {
-  border: dotted;
+  text-align: center;
+  height: auto;
+  border-style: dotted;
   border-color: orange;
   border-width: 1px;
+  padding: 10px 0 0 0;
+  /*margin: 0 0 5px 0;*/
+}
+
+nav > ul > li{
+  display: inline;
+  margin: 20px 20px 20px 0;
+  padding: 2px;
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+}
+
+main{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  height: auto;
+  padding: 5px;
+  position: relative;
+  /*float: left;*/
+}
+
+#middle_content{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  height: 300px;
+  margin: 0 0 5px 0;
+}
+
+#stuff{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  width: 30%;
+  height: 400px;
+  float: left;
+}
+
+#map{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  height: 400px;
+}
+
+#banner{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  height: 100px;
+  margin: 5px 0 0 0;
+}
+
+footer{
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
+  margin: 5px 0 0 0;
+  padding: 5px;
   text-align: center;
+}
+
+footer > ul > li{
+  display: inline;
+  margin: 20px 20px 20px 0;
+  padding: 2px;
+  border-style: dotted;
+  border-color: orange;
+  border-width: 1px;
 }

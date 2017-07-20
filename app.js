@@ -105,23 +105,37 @@ var hourlyTotal = function() {
   salesTable.appendChild(trEl);
 };
 
+//++++++++++++++++++++++++++++++++++ Handler Function +++++++++++++++++++++++++++++++++++++++
+
 function handleSubmit(event) {
   var nameSubmission = event.target.storeName.value;
   var minCustSubmission = parseInt(event.target.minCust.value);
   var maxCustSubmission = parseInt(event.target.maxCust.value);
   var avgSalesSubmission = parseInt(event.target.avgSales.value);
 
-  objectStoreNames.push(nameSubmission);
-  storeNames.push(nameSubmission);
-  minCustomers.push(minCustSubmission);
-  maxCustomers.push(maxCustSubmission);
-  avgSalePerCustomer.push(avgSalesSubmission);
-
-  event.preventDefault();
-
   if(!event.target.storeName.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.avgSales.value){
     return alert('Fields cannot be empty!');
   }
+
+  event.preventDefault();
+
+  var submitStore = function(){
+    for (var i = 0; i < objectStoreNames.length; i++){
+      if (nameSubmission === storeNames[i]){
+        minCustomers[i] = minCustSubmission;
+        maxCustomers[i] = maxCustSubmission;
+        avgSalePerCustomer[i] = avgSalesSubmission;
+        return;
+      }
+    }
+    objectStoreNames.push(nameSubmission);
+    storeNames.push(nameSubmission);
+    minCustomers.push(minCustSubmission);
+    maxCustomers.push(maxCustSubmission);
+    avgSalePerCustomer.push(avgSalesSubmission);
+  };
+
+  submitStore();
 
   event.target.storeName.value = null;
   event.target.minCust.value = null;
@@ -130,7 +144,7 @@ function handleSubmit(event) {
 
   createStores();
 }
-//+++++++++++++++++++++++++++++++++ Event Listeners ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++ Event Listeners ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 createStores();
 addStoreForm.addEventListener('submit', handleSubmit);

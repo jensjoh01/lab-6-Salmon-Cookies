@@ -1,5 +1,6 @@
 * {
   font-family: 'Lora', serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -25,18 +26,19 @@ main{
   border-style: dotted;
   border-color: orange;
   border-width: 1px;
-  height: auto;
+  /*height: 1000px;*/
   padding: 5px;
   position: relative;
-  /*float: left;*/
+  min-width: 900px;
 }
 
 #middle_content{
   border-style: dotted;
   border-color: orange;
   border-width: 1px;
-  height: 300px;
+  height: 450px;
   margin: 0 0 5px 0;
+  position: relative;
 }
 
 #stuff{
@@ -49,10 +51,14 @@ main{
 }
 
 #map{
+  margin-right: 0;
   border-style: dotted;
   border-color: orange;
   border-width: 1px;
   height: 400px;
+  width: 600px;
+  float: right;
+
 }
 
 #banner{
@@ -61,6 +67,7 @@ main{
   border-width: 1px;
   height: 100px;
   margin: 5px 0 0 0;
+  clear: left;
 }
 
 footer{
@@ -79,4 +86,8 @@ footer > ul > li{
   border-style: dotted;
   border-color: orange;
   border-width: 1px;
+}
+
+.clearfix{
+  overflow: auto;
 }

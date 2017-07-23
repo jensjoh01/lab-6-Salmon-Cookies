@@ -2,47 +2,148 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel = "stylesheet" href = "reset.css">
     <link rel = "stylesheet" href = "public.css">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-  <meta name="description" content="Display a map highlighting points of interest">
-  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Display a map highlighting points of interest">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <title>Pat's Salmon Cookies</title>
   </head>
   <body>
-    <header>Pat's Slammin' Salmon Cookies
+    <header>
+      <h1>
+        <span class = "char1">P</span>
+        <span class = "char2">a</span>
+        <span class = "char3">t</span>
+        <span class = "char4">'</span>
+        <span class = "char5">s</span>
+        <span class = "char6"> </span>
+        <span class = "char7">S</span>
+        <span class = "char8">l</span>
+        <span class = "char9">a</span>
+        <span class = "char10">m</span>
+        <span class = "char11">m</span>
+        <span class = "char12">i</span>
+        <span class = "char13">n</span>
+        <span class = "char14">'</span>
+        <span class = "char15"> </span>
+        <span class = "char16">S</span>
+        <span class = "char17">a</span>
+        <span class = "char18">l</span>
+        <span class = "char19">m</span>
+        <span class = "char20">o</span>
+        <span class = "char21">n</span>
+        <span class = "char22"> </span>
+        <span class = "char23">C</span>
+        <span class = "char24">o</span>
+        <span class = "char25">o</span>
+        <span class = "char26">k</span>
+        <span class = "char27">i</span>
+        <span class = "char28">e</span>
+        <span class = "char29">s</span>
+        <span class = "char30"> </span>
+        <span class = "char31">&#174</span>
+      </h1>
       <nav>
+        <a href = "file:///Users/john_jensen/codefellows/201/lab-6/lab-6-Salmon-Cookies/index.html"><img src = "img/salmon.png" id = "icon"></a>
         <ul>
-          <li>What</li>
-          <li>Goes</li>
-          <li>Here</li>
+          <li id = "shop"><a href = "">Shop</a></li>
+          <li id = "about_us"><a href = "">About Us</a></li>
+          <li id = "our_mission"><a href = "">Our Mission</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-    <div id = "middle_content">
-      Here is where I will want attention grabber.
-    </div>
-      <div id = "stuff">
-        Here is where I will want to sell T-Shirt/stuff.
-      </div>
-      <div id = "map"></div>
-      <div id = "banner">
-        Here is where I want to make an ad banner fish + cookie =
-      </div>
-    </main>
-    <footer>
-      This is the footer
+    <div id = "hero">
+      <img src = "img/family.jpg">
       <ul>
-        <li>Contact</li>
-        <li>something</li>
-        <li>something</li>
+        <li id = "eat">&#8220;Eat Salmon Cookies...</li>
+        <li id = "happy">...be freakishly happy.&#8221;</li>
+      </ul>
+    </div>
+
+    <div id = "hours">
+      <ul>
+        <li id = "locations_hours">Locations and Hours</li>
+      </ul>
+      <ul>
+        <li><h3>1st and Pike</h3></li>
+        <li>102 Pike st Seattle WA 98101</li>
+        <li>Hours: Mon - Sun: 8:00am - 8:00pm</li>
+      </ul>
+      <ul>
+        <li><h3>SeaTac Airport</h3></li>
+        <li>17801 International Blvd SeaTac, WA 98158</li>
+        <li>Hours: Mon - Sun: 10:00am - 6:00pm</li>
+      </ul>
+      <ul>
+        <li><h3>Seattle Center</h3></li>
+        <li>305 Harrison St Seattle WA 98109</li>
+        <li>Hours: Mon - Sun: 10:00am - 6:00pm</li>
+      </ul>
+      <ul>
+        <li><h3>Capitol Hill</h3></li>
+        <li>532 Broadway E, Seattle, WA 98102</li>
+        <li>Hours: Mon - Sun: 8:00am - 6:00pm</li>
+      </ul>
+      <ul>
+        <li><h3>Alki</h3></li>
+        <li>2742 Alki Ave SW Seattle WA 98116</li>
+        <li>Hours: Mon - Sun: 10:00am - 8:00pm</li>
+      </ul>
+    </div>
+
+    <div id = "locations">
+      <div id = "map"></div>
+    </div>
+
+    <div id = "for_sale">
+      <h2>Pick up some salmon cookie swag!</h2>
+      <img src = "img/cutter.jpeg" id = "cutter">
+      <img src = "img/fish.jpg" id = "fish_decorations">
+      <img src = "img/frosted-cookie.jpg" id = "cookie">
+      <img src = "img/shirt.jpg" id = "shirt">
+    </div>
+
+    <div class = "sale_description">
+      <ul id = "cutter_description">
+        <li>Buy the same cookie cutter our master cookie artisans use!</li>
+        <li>Aircraft grade aluminum!</li>
+        <li class = "price">Only $49.99!!</li>
+      </ul>
+      <ul id = "decoration_description">
+        <li>Want your kitchen to have the same wallpaper as ours?!?!</li>
+        <li class = "price">Only $29.99/sqft</li>
+      </ul>
+      <ul id = "decoration_description">
+        <li>Of course you can order our Slammin' Salmon Cookies&#174 online!</li>
+        <li class = "price">$19.99/dozen</li>
+      </ul>
+      <ul id = "tshirt_description">
+        <li>Want this sweet t-shirt?</li>
+        <li>Because of course you do.</li>
+        <li class = "price">If you have to ask you can't afford it</li>
+      </ul>
+    </div>
+    </main>
+
+    <footer>
+      <hr></hr>
+      <img src = "img/chinook.jpg">
+      <ul>
+        <li><a href = "">Contact Us</a></li>
+        <li><a href = "">Shop</a></li>
+        <li><a href = "">About Us</a></li>
+        <li><a href = "">Our Mission</a></li>
+        <li><a href = "https://seattle.craigslist.org/see/fbh/d/cookie-store-employees/6216284451.html">Careers</a></li>
     </footer>
     <script type="text/javascript" src='map/app.js'></script>
   </body>

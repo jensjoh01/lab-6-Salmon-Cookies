@@ -14,7 +14,7 @@ td {
   text-align: center;
 }
 th {
-	background-color: navy;
+	background-color: blue;
 	color: white;
   padding: 10px;
   text-align: center;
@@ -22,4 +22,20 @@ th {
 h1{
   text-align: center;
   font-size: 50px;
+}
+
+.loc{
+  background-color: #ddc49d;
+}
+
+.footer{
+  background-color: #ddc49d;
+}
+
+#add-store-form {
+  background: salmon;
+}
+
+legend {
+  font-size: 28px;
 }

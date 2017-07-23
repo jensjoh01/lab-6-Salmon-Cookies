@@ -1,91 +1,247 @@
-* {
+body {
   font-family: 'Lora', serif;
   box-sizing: border-box;
+  width: 960px;
+  margin: 30px auto;
 }
 
 header {
   text-align: center;
   height: auto;
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
-  padding: 10px 0 0 0;
-  /*margin: 0 0 5px 0;*/
+  height: 170px;
+  position: relative;
+}
+
+h1 {
+  position: relative;
+}
+
+h1 span {
+  font: 22px Monaco, MonoSpace;
+  height: 200px;
+  margin-top: 30px;
+  position: absolute;
+  width: 20px;
+  /*left: 0;*/
+  /*top: 0;*/
+  transform-origin: bottom center;
+}
+
+.char1 { transform: rotate(-60deg);}
+.char2 { transform: rotate(-56deg);}
+.char3 { transform: rotate(-52deg);}
+.char4 { transform: rotate(-48deg);}
+.char5 { transform: rotate(-44deg);}
+.char6 { transform: rotate(-40deg);}
+.char7 { transform: rotate(-36deg);}
+.char8  { transform: rotate(-32deg);}
+.char9 { transform: rotate(-28deg);}
+.char10 { transform: rotate(-24deg);}
+.char11 { transform: rotate(-20deg);}
+.char12 { transform: rotate(-16deg);}
+.char13 { transform: rotate(-12deg);}
+.char14 { transform: rotate(-8deg);}
+.char15 { transform: rotate(-4deg);}
+.char16 { transform: rotate(0deg);}
+.char17 { transform: rotate(4deg);}
+.char18 { transform: rotate(8deg);}
+.char19 { transform: rotate(12deg);}
+.char20 { transform: rotate(16deg);}
+.char21 { transform: rotate(20deg);}
+.char22 { transform: rotate(24deg);}
+.char23 { transform: rotate(28deg);}
+.char24 { transform: rotate(32deg);}
+.char25 { transform: rotate(36deg);}
+.char26 { transform: rotate(40deg);}
+.char27 { transform: rotate(44deg);}
+.char28 { transform: rotate(48deg);}
+.char29 { transform: rotate(52deg);}
+.char30 { transform: rotate(56deg);}
+.char31 { transform: rotate(60deg);}
+
+#icon {
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  left: 400px;
+  top: 80px;
+}
+
+nav ul {
+  margin-top: 0px;
+  /*align-content: center;*/
 }
 
 nav > ul > li{
   display: inline;
-  margin: 20px 20px 20px 0;
+  /*margin: 20px;*/
   padding: 2px;
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
 }
 
+#about_us {
+  position: relative;
+  left: 40px;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+#our_mission {
+  position: relative;
+  left: 80px;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+#shop {
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+/*++++++++++++++++++++++++++++ Main ++++++++++++++++++++++++++++++++*/
+
 main{
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
-  /*height: 1000px;*/
-  padding: 5px;
   position: relative;
   min-width: 900px;
 }
 
-#middle_content{
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
-  height: 450px;
-  margin: 0 0 5px 0;
-  position: relative;
+#hero {
+  width: 960px;
+}
+#hero img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-#stuff{
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
-  width: 30%;
+#eat{
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  left: 70px;
+  top: 10px;
+  font-size: 42px;
+}
+
+#happy{
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  right: 290px;
+  top: 430px;
+  font-size: 42px;
+}
+
+#locations {
+  width: 960px;
   height: 400px;
-  float: left;
+  margin-top: 30px;
 }
 
 #map{
   margin-right: 0;
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
   height: 400px;
-  width: 600px;
+  width: 500px;
   float: right;
+}
+
+#hours {
+  margin-top: 30px;
+  width: 450px;
+  height: 400px;
+  float: left;
+}
+
+#hours ul {
+  margin-top: 10px;
+}
+
+#hours ul li {
+  padding-top: 4px;
+}
+
+#locations_hours {
+  font-size: 28px;
+  text-align: center;
+  background-color: salmon;
+  padding: 4px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+#for_sale {
+  width: 100%;
+  height: 295px;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: salmon;
+  font-size: 36px;
+  padding: 8px;
+}
+
+#for_sale img {
+  width: 200px;
+  display: inline;
+  clear: both;
+}
+
+#cutter {}
+
+#fish_decorations {
+  margin: 0 35px 0 35px;
+}
+
+#cookie {
+  margin: 0 35px 0 35px;
+}
+
+#shirt {}
+
+.sale_description {
+  height: 100px;
+  position: relative;
 
 }
 
-#banner{
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
-  height: 100px;
-  margin: 5px 0 0 0;
-  clear: left;
+.sale_description > ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+
+}
+
+.sale_description ul li {
+  padding: 2px;
+}
+
+.price {
+  font-weight: bold;
+  color: red;
+}
+
+#decoration_description {
+  margin: 0 35px 0 35px;
 }
 
 footer{
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
   margin: 5px 0 0 0;
   padding: 5px;
   text-align: center;
 }
 
+footer img {
+  margin-bottom: 20px;
+}
+
 footer > ul > li{
   display: inline;
-  margin: 20px 20px 20px 0;
-  padding: 2px;
-  border-style: dotted;
-  border-color: orange;
-  border-width: 1px;
+  margin: 40px 20px 20px 0;
+  padding: 20px;
 }
 
 .clearfix{

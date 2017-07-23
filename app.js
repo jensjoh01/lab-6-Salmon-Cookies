@@ -47,6 +47,7 @@ CookieStore.prototype.render = function (){
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = this.name;
+  tdEl.className = 'loc';
   trEl.appendChild(tdEl);
   for(var i = 0; i < hours.length; i++){
     tdEl = document.createElement('td');
@@ -59,6 +60,7 @@ CookieStore.prototype.render = function (){
   salesTable.appendChild(trEl);
 };
 
+CookieStore.all = [];//????????
 //++++++++++++++++++++++++++++++++ Function Declarations +++++++++++++++++++++++++++++++++++++++++++++++
 
 var header = function() {
@@ -92,6 +94,7 @@ var hourlyTotal = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = 'Hourly Totals';
+  tdEl.className = 'footer';
   trEl.appendChild(tdEl);
   for(var i = 0; i < hours.length; i++){
     var sumUpHourlySales = 0;
@@ -99,6 +102,7 @@ var hourlyTotal = function() {
     for(var j = 0; j < objectStoreNames.length; j++){
       sumUpHourlySales += objectStoreNames[j].cookieSalesEachHour[i];
       tdEl.textContent = sumUpHourlySales;
+      tdEl.className = 'footer';
     }
     trEl.appendChild(tdEl);
   }
